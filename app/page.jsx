@@ -37,7 +37,7 @@ export default function Home() {
               </a>
             </Button>
             <Button size="lg" variant="outline">
-              <a href="https://app.zealapp.com">Sign In to Web App</a>
+              <a href="https://app.zeal.rw">Sign In to Web App</a>
             </Button>
           </div>
           <div className="mt-12">

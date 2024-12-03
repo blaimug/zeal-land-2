@@ -43,7 +43,7 @@ export function Navigation() {
               Support
             </Link>
             <Button asChild variant="outline">
-              <Link href="https://app.zealapp.com">Sign In</Link>
+              <Link href="https://app.zeal.rw">Sign In</Link>
             </Button>
             <Button asChild>
               <Link href="https://apps.apple.com/us/app/zeal-congregation-assisstant/id6737194361">
@@ -88,7 +88,7 @@ export function Navigation() {
                 Support
               </Link>
               <Button asChild variant="outline" className="w-full">
-                <Link href="https://app.zealapp.com">Sign In</Link>
+                <Link href="https://app.zeal.rw">Sign In</Link>
               </Button>
               <Button asChild className="w-full">
                 <Link href="https://apps.apple.com/us/app/zeal-congregation-assisstant/id6737194361">
