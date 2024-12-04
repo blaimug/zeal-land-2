@@ -45,21 +45,21 @@ const features = [
     icon: FileText,
     title: "Automatic PDFs",
     description: "Generate professional documents and reports automatically with our PDF creation tool.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/screenshot-1.PNG",
     color: "bg-indigo-100"
   },
   {
     icon: Users,
     title: "Congregation Directory",
     description: "Maintain an up-to-date digital directory of all congregation members for easy access.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/screenshot-1.PNG",
     color: "bg-pink-100"
   },
   {
     icon: Settings,
     title: "Customizable Settings",
     description: "Tailor the app to your congregation's specific needs with our flexible settings options.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/screenshot-1.PNG",
     color: "bg-orange-100"
   }
 ]

@@ -32,6 +32,7 @@ export const metadata = {
     description: 'Schedule Christian Life & Ministry meeting parts, Public Talk assignments, Duties, Territories, Cart Schedule, Field Service Reports and more.',
     images: ['/og-image.png'],
   },
+  verification: { google: "x2Pjbm095gMdhic33fpc3Hv1D1oKusFqOiycAJi_3sA" },
 }
 
 export default function RootLayout({ children }) {

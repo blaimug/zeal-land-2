@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-400 rounded-full blur-[100px] opacity-20" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400 rounded-full blur-[100px] opacity-20" />
         <div className="container mx-auto px-4 pt-32 text-center relative">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500 py-10">
             Your Complete Congregation Assistant
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -35,13 +35,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="bg-[#006cff] hover:bg-[#006cff]/90">
               <a href="https://apps.apple.com/us/app/zeal-congregation-assisstant/id6737194361" className="flex items-center">
-                <img src="/app-store-badge.svg" alt="Download on the App Store" className="h-8 mr-2" />
+                <img src="/app-store-badge.svg" alt="Download on the App Store" className="h-6 mr-2" />
                 Download on App Store
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="#" className="flex items-center">
-                <img src="/play-store-badge.svg" alt="Get it on Google Play" className="h-8 mr-2" />
+                <img src="/play-store-badge.svg" alt="Get it on Google Play" className="h-6 mr-2" />
                 Get it on Google Play
               </a>
             </Button>
