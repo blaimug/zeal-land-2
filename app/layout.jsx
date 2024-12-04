@@ -8,9 +8,22 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const dmSans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata = {
+  verification: { google: "x2Pjbm095gMdhic33fpc3Hv1D1oKusFqOiycAJi_3sA" },
   title: 'Zeal - Congregation Assistant App',
   description: 'Schedule Christian Life & Ministry meeting parts, Public Talk assignments, Duties, Territories, Cart Schedule, Field Service Reports and more.',
   metadataBase: new URL('https://zeal.rw'),
+  keywords: [
+    "jw",
+    "Jehovah's Witnesses",
+    "cart witnessing",
+    "jw cart",
+    "clm schedule",
+    "nw publisher",
+    "nw scheduler",
+    "jwcart",
+    "public witnessing",
+    "zeal jw",
+  ],
   openGraph: {
     title: 'Zeal - Congregation Assistant App',
     description: 'Schedule Christian Life & Ministry meeting parts, Public Talk assignments, Duties, Territories, Cart Schedule, Field Service Reports and more.',
@@ -32,7 +45,7 @@ export const metadata = {
     description: 'Schedule Christian Life & Ministry meeting parts, Public Talk assignments, Duties, Territories, Cart Schedule, Field Service Reports and more.',
     images: ['/og-image.png'],
   },
-  verification: { google: "x2Pjbm095gMdhic33fpc3Hv1D1oKusFqOiycAJi_3sA" },
+
 }
 
 export default function RootLayout({ children }) {
