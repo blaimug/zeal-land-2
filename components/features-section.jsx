@@ -10,49 +10,57 @@ const features = [
     icon: Calendar,
     title: "Meeting Scheduler",
     description: "Effortlessly organize and manage all congregation meetings with our intuitive scheduler.",
-    image: "/screenshot-1.PNG"
+    image: "/screenshot-1.PNG",
+    color: "bg-blue-100"
   },
   {
     icon: Clock,
     title: "Ministry Timer",
     description: "Track ministry time and submit reports with ease using our built-in timer and reporting system.",
-    image: "/screenshot-2.PNG"
+    image: "/screenshot-2.PNG",
+    color: "bg-green-100"
   },
   {
     icon: Map,
     title: "Territory Management",
     description: "Efficiently manage and assign territories with our digital territory cards and management system.",
-    image: "/screenshot-3.PNG"
+    image: "/screenshot-3.PNG",
+    color: "bg-yellow-100"
   },
   {
     icon: MessageSquare,
     title: "Communication",
     description: "Stay connected with your congregation members through our integrated messaging platform.",
-    image: "/screenshot-4.PNG"
+    image: "/screenshot-4.PNG",
+    color: "bg-purple-100"
   },
   {
     icon: Bell,
     title: "Smart Reminders",
     description: "Never miss an assignment or meeting again with our intelligent reminder system.",
-    image: "/screenshot-5.PNG"
+    image: "/screenshot-5.PNG",
+    color: "bg-red-100"
   },
   {
     icon: FileText,
     title: "Automatic PDFs",
     description: "Generate professional documents and reports automatically with our PDF creation tool.",
-    image: "/placeholder.svg?height=600&width=800"
+    image: "/placeholder.svg?height=600&width=800",
+    color: "bg-indigo-100"
   },
   {
     icon: Users,
     title: "Congregation Directory",
     description: "Maintain an up-to-date digital directory of all congregation members for easy access.",
-    image: "/placeholder.svg?height=600&width=800"
+    image: "/placeholder.svg?height=600&width=800",
+    color: "bg-pink-100"
   },
   {
     icon: Settings,
     title: "Customizable Settings",
     description: "Tailor the app to your congregation's specific needs with our flexible settings options.",
-    image: "/placeholder.svg?height=600&width=800"
+    image: "/placeholder.svg?height=600&width=800",
+    color: "bg-orange-100"
   }
 ]
 
@@ -71,7 +79,7 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Everything You Need</h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 space-y-4">
             {features.map((feature, index) => (
               <FeatureItem
                 key={index}
@@ -91,13 +99,15 @@ export function FeaturesSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-lg shadow-xl overflow-hidden"
+                  className={`rounded-lg overflow-hidden ${features[activeFeature].color}`}
                 >
-                  <img
-                    src={features[activeFeature].image}
-                    alt={features[activeFeature].title}
-                    className="w-full h-auto"
-                  />
+                  <div className="p-8">
+                    <img
+                      src={features[activeFeature].image}
+                      alt={features[activeFeature].title}
+                      className="w-full h-auto max-w-md mx-auto"
+                    />
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -113,7 +123,7 @@ function FeatureItem({ feature, isActive, onClick, isDesktop }) {
 
   return (
     <motion.div
-      className={`mb-4 rounded-lg ${isActive ? 'bg-white shadow-md' : 'bg-transparent'}`}
+      className={`rounded-lg ${isActive ? 'bg-white shadow-md' : 'bg-transparent'}`}
       initial={false}
       animate={{ backgroundColor: isActive ? '#FFFFFF' : 'transparent' }}
       transition={{ duration: 0.3 }}
@@ -148,13 +158,15 @@ function FeatureItem({ feature, isActive, onClick, isDesktop }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="mt-4 bg-white rounded-lg shadow-xl overflow-hidden"
+                className={`mt-4 rounded-lg overflow-hidden ${feature.color}`}
               >
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-auto"
-                />
+                <div className="p-8">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-auto max-w-md mx-auto"
+                  />
+                </div>
               </motion.div>
             )}
           </motion.div>

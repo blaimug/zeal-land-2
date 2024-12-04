@@ -59,14 +59,14 @@ export function Footer() {
                 className="block"
               >
                 <img
-                  src="/app-store-badge.svg"
+                  src="/app-store-badge.png"
                   alt="Download on the App Store"
                   className="h-10"
                 />
               </a>
               <a href="#" className="block">
                 <img
-                  src="/play-store-badge.svg"
+                  src="/play-store-badge.png"
                   alt="Get it on Google Play"
                   className="h-10"
                 />

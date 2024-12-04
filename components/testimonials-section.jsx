@@ -1,28 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
 
 const testimonials = [
   {
     name: "John Smith",
     role: "Congregation Secretary",
     content: "Zeal has completely transformed how we manage our congregation. The meeting scheduler alone has saved us countless hours.",
-    rating: 5,
     image: "/placeholder.svg?height=100&width=100"
   },
   {
     name: "Sarah Johnson",
     role: "Ministry Group Overseer",
     content: "The territory management feature is incredible. It's made organizing field service so much more efficient.",
-    rating: 5,
     image: "/placeholder.svg?height=100&width=100"
   },
   {
     name: "Michael Brown",
     role: "Elder",
     content: "I appreciate how user-friendly the app is. Even our older members find it easy to use for their ministry reports.",
-    rating: 5,
     image: "/placeholder.svg?height=100&width=100"
   }
 ]
@@ -75,11 +71,6 @@ function TestimonialCard({ testimonial, delay }) {
           <h3 className="font-bold">{testimonial.name}</h3>
           <p className="text-gray-600 text-sm">{testimonial.role}</p>
         </div>
-      </div>
-      <div className="flex mb-4">
-        {[...Array(testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-        ))}
       </div>
       <p className="text-gray-700">{testimonial.content}</p>
     </motion.div>
