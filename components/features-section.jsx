@@ -2,66 +2,81 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, ChevronUp, Calendar, Clock, Map, MessageSquare, Bell, FileText, Users, Settings } from 'lucide-react'
+import { ChevronDown, ChevronUp, Calendar, Clock, Map, MessageSquare, Bell, FileText, Hammer, MicVocal, BriefcaseBusiness, LibraryBig } from 'lucide-react'
 import { useMediaQuery } from '@/hooks/use-media-query'
 
 const features = [
   {
-    icon: Calendar,
-    title: "Meeting Scheduler",
-    description: "Effortlessly organize and manage all congregation meetings with our intuitive scheduler.",
+    icon: Bell,
+    title: "Stay on track",
+    description: "On home you are reminded of the upcoming assignments, and in the future, you'll be able to get notifications",
     image: "/screenshot-1.PNG",
     color: "bg-blue-100"
+  },
+  {
+    icon: Calendar,
+    title: "Midweek Scheduler",
+    description: "Effortlessly organize and manage all CLM meetings with our intuitive scheduler, with part titles automatically filled in.",
+    image: "/clm.PNG",
+    color: "bg-green-100"
+  },
+  {
+    icon: MicVocal,
+    title: "Weekend Scheduler",
+    description: "Schedule public talks, watchtower readers, hospitality for visiting speakers, and more.",
+    image: "/weekend.PNG",
+    color: "bg-amber-100"
   },
   {
     icon: Clock,
     title: "Ministry Timer",
     description: "Track ministry time and submit reports with ease using our built-in timer and reporting system.",
-    image: "/screenshot-2.PNG",
-    color: "bg-green-100"
+    image: "/screenshot-3.PNG",
+    color: "bg-yellow-100"
+  },
+  {
+    icon: LibraryBig,
+    title: "Cart Schedules",
+    description: "Create cart shifts in the app, and allow publishers to book in different slots according to their availability.",
+    image: "/screenshot-4.PNG",
+    color: "bg-lime-100"
   },
   {
     icon: Map,
     title: "Territory Management",
     description: "Efficiently manage and assign territories with our digital territory cards and management system.",
-    image: "/screenshot-3.PNG",
-    color: "bg-yellow-100"
+    image: "/territory.PNG",
+    color: "bg-fuschia-100"
+  },
+  {
+    icon: Hammer,
+    title: "Duties Management",
+    description: "Efficiently manage duties, like roving microphones, platform, video and sound operators, attendance, and cleaning groups.",
+    image: "/duties.jpeg",
+    color: "bg-emerald-100"
+  },
+
+  {
+    icon: BriefcaseBusiness,
+    title: "Efficient organisation",
+    description: "Maintain an up-to-date digital directory of necessary information for easy access.",
+    image: "/organize.jpeg",
+    color: "bg-blue-100"
+  },
+  {
+  icon: FileText,
+  title: "PDF Generation",
+  description: "Generate professional documents and reports automatically with our PDF creation tool.",
+  image: "/pdf.jpg",
+  color: "bg-indigo-100"
   },
   {
     icon: MessageSquare,
     title: "Communication",
-    description: "Stay connected with your congregation members through our integrated messaging platform.",
-    image: "/screenshot-4.PNG",
+    description: "Stay connected with publishers in your congregation through our messaging platform.",
+    image: "/chat.PNG",
     color: "bg-purple-100"
   },
-  {
-    icon: Bell,
-    title: "Smart Reminders",
-    description: "Never miss an assignment or meeting again with our intelligent reminder system.",
-    image: "/screenshot-5.PNG",
-    color: "bg-red-100"
-  },
-  {
-    icon: FileText,
-    title: "Automatic PDFs",
-    description: "Generate professional documents and reports automatically with our PDF creation tool.",
-    image: "/screenshot-1.PNG",
-    color: "bg-indigo-100"
-  },
-  {
-    icon: Users,
-    title: "Congregation Directory",
-    description: "Maintain an up-to-date digital directory of all congregation members for easy access.",
-    image: "/screenshot-1.PNG",
-    color: "bg-pink-100"
-  },
-  {
-    icon: Settings,
-    title: "Customizable Settings",
-    description: "Tailor the app to your congregation's specific needs with our flexible settings options.",
-    image: "/screenshot-1.PNG",
-    color: "bg-orange-100"
-  }
 ]
 
 export function FeaturesSection() {
@@ -105,7 +120,7 @@ export function FeaturesSection() {
                     <img
                       src={features[activeFeature].image}
                       alt={features[activeFeature].title}
-                      className="w-full h-auto max-w-md mx-auto"
+                      className="w-full h-auto max-w-md mx-auto max-h-[600px] object-contain"
                     />
                   </div>
                 </motion.div>
@@ -164,7 +179,7 @@ function FeatureItem({ feature, isActive, onClick, isDesktop }) {
                   <img
                     src={feature.image}
                     alt={feature.title}
-                    className="w-full h-auto max-w-md mx-auto"
+                    className="w-full h-auto max-w-md mx-auto max-h-[600px] object-contain"
                   />
                 </div>
               </motion.div>
@@ -175,4 +190,3 @@ function FeatureItem({ feature, isActive, onClick, isDesktop }) {
     </motion.div>
   )
 }
-

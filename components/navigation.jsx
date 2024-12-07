@@ -28,7 +28,7 @@ export function Navigation() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/icon.png" alt="Zeal" className="h-12 w-auto" />
+            <img src="/icon.png" alt="Zeal" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

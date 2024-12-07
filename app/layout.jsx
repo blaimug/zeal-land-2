@@ -1,11 +1,11 @@
-import { DM_Sans } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-const dmSans = DM_Sans({ subsets: ['latin'] })
+const geist = Geist({ subsets: ['latin'] })
 
 export const metadata = {
   verification: { google: "x2Pjbm095gMdhic33fpc3Hv1D1oKusFqOiycAJi_3sA" },
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <head>
       </head>
-      <body className={`${dmSans.className} antialiased`}>
+      <body className={`${geist.className} antialiased`}>
         <Navigation />
         <main>{children}</main>
         <Footer />

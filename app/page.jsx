@@ -1,25 +1,37 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { ContactForm } from '@/components/contact-form'
-import { Calendar, Clock, Map, MessageSquare, Settings, Users, FileText, Bell, ChevronDown, ChevronUp } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FeaturesSection } from '@/components/features-section'
-import { TestimonialsSection } from '@/components/testimonials-section'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ContactForm } from "@/components/contact-form";
+import {
+  Calendar,
+  Clock,
+  Map,
+  MessageSquare,
+  Settings,
+  Users,
+  FileText,
+  Bell,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FeaturesSection } from "@/components/features-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { CounterSection } from "@/components/counter-section";
 
 export default function Home() {
   return (
     <>
-     {/* Hero Section */}
-     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-green-50 to-blue-50" />
         <div
           className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: 'url("/grid.svg")',
-            backgroundSize: '30px 30px',
+            backgroundSize: "30px 30px",
           }}
         />
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-400 rounded-full blur-[100px] opacity-20" />
@@ -28,20 +40,39 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500 py-10">
             Your Complete Congregation Assistant
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Schedule meetings, manage territories, track ministry reports, and more - all in one place.
-            Available in multiple languages, completely free.
+          <p className="text-lg md:text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            Schedule meetings, manage territories, track ministry reports, and
+            more - all in one place. Available in multiple languages, completely
+            free.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild className="bg-[#006cff] hover:bg-[#006cff]/90">
-              <a href="https://apps.apple.com/us/app/zeal-congregation-assisstant/id6737194361" className="flex items-center">
-                <img src="/app-store-badge.svg" alt="Download on the App Store" className="h-6 mr-2" />
+            <Button
+              size="lg"
+              asChild
+              className="bg-[#006cff] hover:bg-[#006cff]/90"
+            >
+              <a
+                href="https://apps.apple.com/us/app/zeal-congregation-assisstant/id6737194361"
+                className="flex items-center"
+              >
+                <img
+                  src="/app-store-badge.svg"
+                  alt="Download on the App Store"
+                  className="h-6 mr-2"
+                />
                 Download on App Store
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="#" className="flex items-center">
-                <img src="/play-store-badge.svg" alt="Get it on Google Play" className="h-6 mr-2" />
+              <a
+                href="https://play.google.com/store/apps/details?id=com.zeal.congregation"
+                className="flex items-center"
+              >
+                <img
+                  src="/play-store-badge.svg"
+                  alt="Get it on Google Play"
+                  className="h-6 mr-2"
+                />
                 Get it on Google Play
               </a>
             </Button>
@@ -50,18 +81,25 @@ export default function Home() {
             <img
               src="/app-preview.png"
               alt="Zeal App Interface"
-              className="mx-auto max-w-4xl w-full rounded-lg shadow-2xl"
+              className="mx-auto max-w-4xl w-full rounded-lg"
             />
           </div>
         </div>
       </section>
 
+      {/* Counter Section */}
+      <CounterSection />
+
       {/* About Zeal Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">What is Zeal?</h2>
-          <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto">
-            Zeal is a comprehensive congregation assistant app designed to streamline the management of Christian congregations. It offers a suite of tools to help with scheduling, territory management, ministry reporting, and more, all in one easy-to-use platform.
+          <p className="text-lg text-center text-gray-600 max-w-3xl mx-auto">
+            Zeal is a comprehensive congregation assistant app designed to
+            streamline the scheduling and organisation in congregations. It
+            offers a suite of tools to help with scheduling, meetings, ministry,
+            cart, territories, duties and assignments, and more, all in one
+            easy-to-use platform.
           </p>
         </div>
       </section>
@@ -90,12 +128,12 @@ export default function Home() {
             <div className="space-y-4">
               <FAQItem
                 question="How do I get started with Zeal?"
-                answer="Download the app from the App Store, create an account, and start exploring the features. It's completely free to use!"
+                answer="Download the app from the Apple App Store, or Google Play Store create an account, and start exploring the features. It's completely free to use! You can also use the web version which may be more limited in features than the mobile applications. "
                 isOpenByDefault={true}
               />
               <FAQItem
                 question="Is Zeal available in my language?"
-                answer="Zeal is available in multiple languages. Check the App Store listing for the current list of supported languages."
+                answer="Zeal is available in multiple languages. Currently Zeal is available in English and Kinyarwanda. Other languages can also easily be added on demand. To request another language feel free to fill out the contact form above."
               />
               <FAQItem
                 question="How can I report an issue?"
@@ -106,7 +144,7 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 function FAQItem({ question, answer, isOpenByDefault = false }) {
@@ -131,7 +169,7 @@ function FAQItem({ question, answer, isOpenByDefault = false }) {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -144,4 +182,3 @@ function FAQItem({ question, answer, isOpenByDefault = false }) {
     </div>
   );
 }
-

@@ -64,7 +64,7 @@ export function Footer() {
                   className="h-10"
                 />
               </a>
-              <a href="#" className="block">
+              <a href="https://play.google.com/store/apps/details?id=com.zeal.congregation" className="block">
                 <img
                   src="/play-store-badge.png"
                   alt="Get it on Google Play"

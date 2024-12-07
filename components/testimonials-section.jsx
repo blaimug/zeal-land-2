@@ -4,22 +4,40 @@ import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    name: "John Smith",
-    role: "Congregation Secretary",
-    content: "Zeal has completely transformed how we manage our congregation. The meeting scheduler alone has saved us countless hours.",
-    image: "/placeholder.svg?height=100&width=100"
+    name: "Benjamin G.",
+    role: "CLM Overseer",
+    content: "Preparing S-140 schedules used to take so many hours, especially copying and pasting part titles. Now it's automatic with Zeal.",
+    image: "/neutralAvatar.png"
   },
   {
-    name: "Sarah Johnson",
-    role: "Ministry Group Overseer",
-    content: "The territory management feature is incredible. It's made organizing field service so much more efficient.",
-    image: "/placeholder.svg?height=100&width=100"
+    name: "Jules I.",
+    role: "A/V Overseer",
+    content: "Because duties in the app are synchronized, brothers know what they are going to do, and can prepare well before. I appreciate the nice design too.",
+    image: "/neutralAvatar.png"
   },
   {
-    name: "Michael Brown",
+    name: "Philadephie M.",
     role: "Elder",
-    content: "I appreciate how user-friendly the app is. Even our older members find it easy to use for their ministry reports.",
-    image: "/placeholder.svg?height=100&width=100"
+    content: "Managing Cart Witnessing was hard before, but now publishers can book for their slots at the time convenient for them, and do it ahead of time. ",
+    image: "/neutralAvatar.png"
+  },
+  {
+    name: "Christian M.",
+    role: "Elder",
+    content: "I appreciate how user-friendly the app is. Even our older publishers find it easy to use for their ministry reports.",
+    image: "/neutralAvatar.png"
+  },
+  {
+    name: "Medad M.",
+    role: "Elder",
+    content: "I love you the app generates nice PDFs after the scheduling, so that we can post them on the board. It even supports the second room feature, which we are using.",
+    image: "/neutralAvatar.png"
+  },
+  {
+    name: "Joachim I.",
+    role: "WT Study Planner",
+    content: "Making plans for the Watchtower Study is so much better now, you easily select public talks, and you can assign visiting speakers, hospitality and more. ",
+    image: "/neutralAvatar.png"
   }
 ]
 
@@ -34,7 +52,7 @@ export function TestimonialsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Loved by Congregations</h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-gray-600">
             Here's what brothers and sisters are saying about Zeal
           </p>
         </motion.div>
