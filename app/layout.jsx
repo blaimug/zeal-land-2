@@ -8,7 +8,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata = {
-  verification: { google: "x2Pjbm095gMdhic33fpc3Hv1D1oKusFqOiycAJi_3sA" },
+  verification: { google: "LzHrcGYqw3mDvjVLLWVvI-hvztmh3L2LdEC0jgqXUFs" },
   title: "Zeal - Congregation Assistant App",
   description:
     "Schedule Christian Life & Ministry meeting parts, Public Talk assignments, Duties, Territories, Cart Schedule, Field Service Reports and more.",
